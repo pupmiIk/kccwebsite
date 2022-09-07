@@ -1,11 +1,49 @@
 <!DOCTYPE html>
-<head>
-  <title>KCC Cinema</title>
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <style>
-  
-  body {
+  <head>
+    <title>KCC Cinema</title>
     
-  }
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+    
+		body {
+		  background: #052248;
+      		  font-family: 'Barlow', sans-serif;
+		  height: 100%;
+		  margin: 0 auto;
+		  overflow-x: hidden;
+		  overflow-y: auto;
+		  align: center;
+		}
+
+		.header {
+	 	 padding: 10px;
+		 float: left;
+	 	 background: #02367C;
+		 font-size: 40px;
+		 text-align: left;
+		 line-height: 30px;
+		 min-width:100%;
+		}
+
+		#logo {
+		 margin: 10px;
+		 vertical-align: -10px;
+		 float: left;
+		}
+		
+		#heading {
+		 text-shadow: 2px 2px 5px #052248;
+		 vertical-align: -24px;
+		}
+  
+  </style>
+  </head>
+  <body>
+    <div class="header" style="height: 5rem;">
+      <div id="logo"><img src="logo.png" height="60"></img></div>
+      <span id="heading" style="color: white;">CINEMA</span> <span id="heading" style="color: #00A7E0;">ZAMBOANGA</span>
+    </div>
+  </body>
+</html>
