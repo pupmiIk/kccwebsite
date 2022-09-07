@@ -1,12 +1,12 @@
 <!DOCTYPE html>
   <head>
     <title>KCC Cinema</title>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
-    
+
 		body {
 		  background: #052248;
       		  font-family: 'Barlow', sans-serif;
@@ -21,9 +21,11 @@
 	 	 padding: 10px;
 		 float: left;
 	 	 background: #02367C;
+      		 font-weight: bold;
 		 font-size: 40px;
 		 text-align: left;
 		 line-height: 30px;
+		 height: 4rem;
 		 min-width:100%;
 		}
 
@@ -37,13 +39,51 @@
 		 text-shadow: 2px 2px 5px #052248;
 		 vertical-align: -24px;
 		}
-  
+		
+		.navigation {
+		 margin: 20px;
+	 	 padding: 10px;
+		 float: left;
+	 	 background: #02367C;
+      		 font-weight: bold;
+		 font-size: 18px;
+		 text-align: center;
+		 min-width:96.7%;
+		}
+		
+		a.button {
+		 border: none;
+		 background-color: #00A7E0;
+		 color: white;
+		 padding: 16px 32px;
+		 text-align: center;
+		 text-decoration: none;
+		 display: inline-block;
+		 font-size: 24px;
+		 margin: 2px 4px;
+		 height: 1.5rem;
+		 width: 18.5rem;
+		 transition-duration: 300ms;
+		 cursor: pointer;
+		}
+
+		a.button:hover {
+		 background-color: #0046A4;
+		}
+
   </style>
   </head>
   <body>
-    <div class="header" style="height: 5rem;">
+    <div class="header">
       <div id="logo"><img src="logo.png" height="60"></img></div>
       <span id="heading" style="color: white;">CINEMA</span> <span id="heading" style="color: #00A7E0;">ZAMBOANGA</span>
+    </div>
+    <div class="navigation">
+      <a href="link" class="button">HOME</a>
+      <a href="link" class="button">NOW SHOWING</a>
+      <a href="link" class="button">COMING SOON</a>
+      <a href="link" class="button">FILM SPOTLIGHT</a>
+      <a href="link" class="button">ABOUT US</a>
     </div>
   </body>
 </html>
