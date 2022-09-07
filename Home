@@ -70,6 +70,128 @@
 		a.button:hover {
 		 background-color: #0046A4;
 		}
+		
+		.bgbox{
+            background-color: #EDEDED;
+            position:relative;
+            padding-top: 40px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            float:right;
+            width:1400px;
+            height:725px;
+            z-index: -9;
+        }
+
+        .whitebox{
+            background-color:white;
+            position:relative;
+            float:right;
+            width:482px;
+            height:641px;
+        }
+  
+  
+        #slider {
+            position: relative;
+            width: 50%;
+            height: 30vw;
+            margin: 80px auto;
+            perspective: 1400px;
+            transform-style: preserve-3d;
+        }
+        
+        input[type=radio] {
+            position: relative;
+            top: 108%;
+            left: 50%;
+            width: 18px;
+            height: 18px;
+            margin: 0 15px 0 0;
+            opacity: 0.4;
+            transform: translateX(-83px);
+            cursor: pointer;
+        }
+        
+        
+        input[type=radio]:nth-child(5) {
+            margin-right: 0px;
+        }
+        
+        input[type=radio]:checked {
+            opacity: 1;
+        }
+        
+        
+        #slider label {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            color: white;
+            font-size: 70px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 400ms ease;
+        }
+        
+        #slides1 {
+            width: 100%;
+            height: 100%;
+        }
+        
+        #slides2 {
+            width: 100%;
+            height: 100%;
+        }
+        
+        #slides3 {
+            width: 100%;
+            height: 100%;
+        }
+        
+        #slides4 {
+            width: 100%;
+            height: 100%;
+        }
+        
+        #slides5 {
+            width: 100%;
+            height: 100%;
+        }
+        
+        
+        #s1:checked ~ #slides1, #s2:checked ~ #slides2, #s3:checked ~ #slides3, #s4:checked ~ #slides4, #s5:checked ~ #slides5 {
+            box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2);
+            transform: translate3d(0%, 0, 0px);
+        }
+        
+        #s1:checked ~ #slides2, #s2:checked ~ #slides3, #s3:checked ~ #slides4, #s4:checked ~ #slides5, #s5:checked ~ #slides1 {
+            box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+            transform: translate3d(15%, 0, -100px);
+        }
+        
+        #s1:checked ~ #slides3, #s2:checked ~ #slides4, #s3:checked ~ #slides5, #s4:checked ~ #slides1, #s5:checked ~ #slides2 {
+            box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+            transform: translate3d(30%, 0, -250px);
+        }
+        
+        #s1:checked ~ #slides4, #s2:checked ~ #slides5, #s3:checked ~ #slides1, #s4:checked ~ #slides2, #s5:checked ~ #slides3 {
+            box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+            transform: translate3d(-30%, 0, -250px);
+        }
+        
+        #s1:checked ~ #slides5, #s2:checked ~ #slides1, #s3:checked ~ #slides2, #s4:checked ~ #slides3, #s5:checked ~ #slides4 {
+            box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+            transform: translate3d(-15%, 0, -100px);
+        }
+        
 
   </style>
   </head>
@@ -85,5 +207,28 @@
       <a href="link" class="button">FILM SPOTLIGHT</a>
       <a href="link" class="button">ABOUT US</a>
     </div>
+    
+    <div class="bgbox">
+        <div class="whitebox">
+            <h1 style="text-align:center">    Black Widow</h1><br> <h3 style="text-align:center">PG-13  2021, Action/Adventure, 2h13m</h3> <br> <h4 style="text-align:center">Lorem ipsum dolor sit amet, consectetuer <br>adipiscing elit. Aenean commodo ligula eget<br> dolor. Aenean massa. Cum sociis natoque <br>penatibus et magnis dis parturient montes,<br> nascetur ridiculus mus. Donec quam felis,<br> ultricies nec, pellentesque eu, pretium quis,<br> sem. Nulla consequat massa quis enim.<br> Donec pede justo, fringilla vel, aliquet nec,<br> vulputate eget, arcu. In enim justo, rhoncus <br>ut, imperdiet a, venenatis vitae, justo.<br> Nullam dictum felis eu pede mollis pretium.<br> Integer tincidunt. Cras dapibus. Vivamus<br> elementum semper nisi. Aenean vulputate <br>eleifend tellus. Aenean leo ligula, porttitor<br> eu, consequat vitae, eleifend ac, enim.</h4>
+        </div>
+    </div>
+
+    <div style="display:inline-block;text-align:center">
+    <section id="slider">
+        <input type="radio" name="slider" id="s1" checked>
+        <input type="radio" name="slider" id="s2">
+        <input type="radio" name="slider" id="s3">
+        <input type="radio" name="slider" id="s4">
+        <input type="radio" name="slider" id="s5">
+      
+        <label for="s1" id="slides1"> <img src="https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2021/09/black-widow-1-1631278936.jpg" height ="678" width="911.87"> </label>
+        <label for="s2" id="slides2"><img src="https://m.media-amazon.com/images/M/MV5BNmU3OTZlZDQtNDMwMS00YzkzLWE3ZTEtNzVmMjk3ZTdiZTM3XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg" height ="678" width="911.87"></label>
+        <label for="s3" id="slides3"><img src="https://static01.nyt.com/images/2022/07/16/arts/13sea-beast-design1/merlin_209340603_b7202909-4bc0-4f07-8d29-4629720a1e57-articleLarge.jpg?quality=75&auto=webp&disable=upscale" height ="678" width="911.87"></label>
+        <label for="s4" id="slides4"><img src="https://m.media-amazon.com/images/M/MV5BNzRmYTUwYTgtOWViMS00MWRkLTkyMGEtYjc5M2I3YTYxYWUzXkEyXkFqcGdeQXVyMTQyMTMwOTk0._V1_.jpg" height ="678" width="911.87"></label>
+        <label for="s5" id="slides5"><img src="https://s3.amazonaws.com/static.rogerebert.com/uploads/movie/movie_poster/jurassic-world-dominion-2022/large_jurassic-world-dominion-movie-poster-2022.jpeg" height ="678" width="911.87"></label>
+      </section>
+    </div>
+    
   </body>
 </html>
