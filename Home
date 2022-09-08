@@ -214,7 +214,7 @@
         </div>
     </div>
 
-    <div style="display:inline-block;text-align:center">
+    <div align:left>
     <section id="slider">
         <input type="radio" name="slider" id="s1" checked>
         <input type="radio" name="slider" id="s2">
