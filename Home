@@ -51,7 +51,7 @@
 		 min-width:96.7%;
 		}
 		
-		a.button {
+		a.buttonnav {
 		 border: none;
 		 background-color: #00A7E0;
 		 color: white;
@@ -62,41 +62,87 @@
 		 font-size: 24px;
 		 margin: 2px 4px;
 		 height: 1.5rem;
-		 width: 18.5rem;
+		 width: 18rem;
 		 transition-duration: 300ms;
 		 cursor: pointer;
 		}
 
-		a.button:hover {
+		#rating {
+		 background-color: #C6C6C6;
+		 width: 60px;
+		 position: absolute;
+		}
+
+		a.buttonnav:hover {
 		 background-color: #0046A4;
+		}
+
+		a.readmore {
+		 border: none;
+		 background-color: #02367C;
+		 color: white;
+		 padding: 10px 10px;
+		 position: relative;
+		 text-align: center;
+		 text-decoration: none;
+		 display: inline;
+		 font-size: 24px;
+		 margin: 20px;
+		 top: 20px;
+		 left: 140px;
+		 height: 1rem;
+		 width: 10rem;
+		 transition-duration: 300ms;
+		 cursor: pointer;
+		}
+
+		a.readmore:hover {
+		 background-color: #00A7E0;
 		}
 		
 		.bgbox{
-            background-color: #EDEDED;
-            position:relative;
-            padding-top: 40px;
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-bottom: 20px;
-            float:right;
-            width:1400px;
-            height:725px;
-            z-index: -9;
-        }
+		 background-color: #EDEDED;
+		 margin-top: 180px;
+		 margin-left: 21px;
+		 position: fixed;
+		 padding: 20px;
+		 float:right;
+		 width:1835px;
+		 height:725px;
+		 z-index: -9;
+		}
 
-        .whitebox{
-            background-color:white;
-            position:relative;
-            float:right;
-            width:482px;
-            height:641px;
-        }
+		.card {
+		   background-color: white;
+		   padding: 10px;
+		   margin-top: 30px;
+		   box-shadow: 2px 2px 3px #C6C6C6;
+		}
+
+		.leftcolumn {   
+		  float: left;
+		  width: 75%;
+		}
+
+
+		.rightcolumn {
+		  float: right;
+		  width: 25%;
+		  padding-right: 20px;
+		}
+
+		.row:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+
   
   
         #slider {
-            position: relative;
+            position: absolute;
             width: 50%;
-            height: 30vw;
+            height: 40vw;
             margin: 80px auto;
             perspective: 1400px;
             transform-style: preserve-3d;
@@ -203,20 +249,15 @@
       <span id="heading" style="color: white;">CINEMA</span> <span id="heading" style="color: #00A7E0;">ZAMBOANGA</span>
     </div>
     <div class="navigation">
-      <a href="link" class="button">HOME</a>
-      <a href="link" class="button">NOW SHOWING</a>
-      <a href="link" class="button">COMING SOON</a>
-      <a href="link" class="button">FILM SPOTLIGHT</a>
-      <a href="link" class="button">ABOUT US</a>
+      <a href="link" class="buttonnav">HOME</a>
+      <a href="link" class="buttonnav">NOW SHOWING</a>
+      <a href="link" class="buttonnav">COMING SOON</a>
+      <a href="link" class="buttonnav">FILM SPOTLIGHT</a>
+      <a href="link" class="buttonnav">ABOUT US</a>
     </div>
     
     <div class="bgbox">
-        <div class="whitebox">
-            <h1 style="text-align:center">    Black Widow</h1><br> <h3 style="text-align:center">PG-13  2021, Action/Adventure, 2h13m</h3> <br> <h4 style="text-align:center">Lorem ipsum dolor sit amet, consectetuer <br>adipiscing elit. Aenean commodo ligula eget<br> dolor. Aenean massa. Cum sociis natoque <br>penatibus et magnis dis parturient montes,<br> nascetur ridiculus mus. Donec quam felis,<br> ultricies nec, pellentesque eu, pretium quis,<br> sem. Nulla consequat massa quis enim.<br> Donec pede justo, fringilla vel, aliquet nec,<br> vulputate eget, arcu. In enim justo, rhoncus <br>ut, imperdiet a, venenatis vitae, justo.<br> Nullam dictum felis eu pede mollis pretium.<br> Integer tincidunt. Cras dapibus. Vivamus<br> elementum semper nisi. Aenean vulputate <br>eleifend tellus. Aenean leo ligula, porttitor<br> eu, consequat vitae, eleifend ac, enim.</h4>
-        </div>
-    </div>
-
-    <div align:left>
+    <div class="leftcolumn">
     <section id="slider">
         <input type="radio" name="slider" id="s1" checked>
         <input type="radio" name="slider" id="s2">
@@ -229,7 +270,18 @@
         <label for="s3" id="slides3"><img src="https://static01.nyt.com/images/2022/07/16/arts/13sea-beast-design1/merlin_209340603_b7202909-4bc0-4f07-8d29-4629720a1e57-articleLarge.jpg?quality=75&auto=webp&disable=upscale" height ="678" width="911.87"></label>
         <label for="s4" id="slides4"><img src="https://m.media-amazon.com/images/M/MV5BNzRmYTUwYTgtOWViMS00MWRkLTkyMGEtYjc5M2I3YTYxYWUzXkEyXkFqcGdeQXVyMTQyMTMwOTk0._V1_.jpg" height ="678" width="911.87"></label>
         <label for="s5" id="slides5"><img src="https://s3.amazonaws.com/static.rogerebert.com/uploads/movie/movie_poster/jurassic-world-dominion-2022/large_jurassic-world-dominion-movie-poster-2022.jpeg" height ="678" width="911.87"></label>
-      </section>
+     </section>
+     </div>
+	<div class="rightcolumn">
+        <div class="card" style="height: 40rem">
+            <h1 style="text-align:left; font-size: 45px; text-shadow: 2px 2px 3px #C6C6C6;">BLACK WIDOW</h1>
+	    <h3 style="text-align:center"><div id="rating">PG-13</div> 2021, Action/Adventure, 2h13m</h3>
+	    <p style="text-align:justify; font-size: 20px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+
+	<a href="link" class="readmore">Read More</a>
+        </div>
+	</div>
+
     </div>
     
   </body>
