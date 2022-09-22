@@ -1,80 +1,130 @@
 <!DOCTYPE html>
   <head>
     <title>KCC Cinema</title>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
 
 		body {
-		  background: #052248;
-      		  font-family: 'Barlow', sans-serif;
+		  background-image: url("bg.jpg");
+		  background-color: black;
+		  background-position: center;
+		  background-repeat: none;
+		  background-size: cover;
+      		  font-family: 'Barlow Condensed', sans-serif;
 		  height: 100%;
 		  margin: 0 auto;
-		  overflow-x: hidden;
-		  overflow-y: auto;
-		  align: center;
+		  align-items: center;
 		}
 
 		.header {
-	 	 padding: 10px;
-		 float: left;
-	 	 background: #02367C;
+		 margin: 0 auto;
+		 height: 10vh;
+	 	 padding-left: 1%;
+	 	 padding-right: 1%;
+	 	 background: #ffffff;
+		 box-sizing: border-box;
+		 display: flex;
       		 font-weight: bold;
+		 font-kerning: none;
 		 font-size: 40px;
 		 text-align: left;
-		 line-height: 30px;
-		 height: 4rem;
-		 min-width:100%;
+		 box-shadow: 1px 1px 5px #000000;
 		}
 
-		#logo {
-		 margin: 10px;
+		.logo img {
+		 border-radius: 50%;
+		 width: 60px;
+		}
+
+		.logo {
+		 margin: 2px;
 		 vertical-align: -10px;
+		 cursor: pointer;
 		 float: left;
+		 transition: transform 300ms ease-in-out 20ms;
+		}
+
+		.logo:hover {
+		 transform: scale(1.1,1.1);
 		}
 		
 		#heading {
-		 text-shadow: 2px 2px 5px #052248;
+		 margin-left: 15px;
+		 margin-right: 0 auto;
 		 vertical-align: -24px;
 		}
 		
-		.navigation {
-		 margin: 20px;
-	 	 padding: 10px;
-		 float: left;
-	 	 background: #02367C;
-      		 font-weight: bold;
-		 font-size: 18px;
-		 text-align: center;
-		 min-width:96.7%;
+		.navbar {
+		 width:100%;
+		 display: flex;
+		 align-items: center;
 		}
 		
-		a.buttonnav {
-		 border: none;
-		 background-color: #00A7E0;
-		 color: white;
-		 padding: 7px 32px;
-		 text-align: center;
+		nav {
+		 flex: 1;
+		 text-align: right;
+      		 font-weight: normal;
+		}
+		
+		nav ul li {
+		 list-style: none;
+		 position: relative;
+		 bottom: 30px;
+		 display: inline;
+		 margin: 5px;
+		}
+		
+		nav ul li a {
+		 color: black;
+		 text-align: right;
 		 text-decoration: none;
 		 display: inline-block;
-		 font-size: 24px;
-		 margin: 2px 4px;
-		 height: 1.5rem;
-		 width: 18rem;
+		 font-size: 20px;
+		 margin: 1px;
 		 transition-duration: 300ms;
 		 cursor: pointer;
 		}
 
-		#rating {
-		 background-color: #C6C6C6;
-		 width: 60px;
-		 position: absolute;
+		nav ul li a:hover {
+		 color: #0046A4;
+		 font-size: 21px;
 		}
 
-		a.buttonnav:hover {
-		 background-color: #0046A4;
+		.menu {
+		 margin: 20px;
+		 cursor: pointer;
+		 display: none;
+		}
+
+		.menu img {
+		 width: 10px;
+		}
+
+		h1 {
+		 text-align:left;
+		 color: #001E88;
+		 font-size: 45px;
+		 font-kerning: none;
+		}
+		
+		h3 {
+		 text-align:left;
+		}
+
+		p {
+		 text-align:justify;
+		 font-size: 20px;
+		}
+
+		#rating {
+		 background-color: #C6C6C6;
+		 width: 70px;
+		 display: inline;
+		 position: relative;
 		}
 
 		a.readmore {
@@ -99,190 +149,142 @@
 		a.readmore:hover {
 		 background-color: #00A7E0;
 		}
-		
-		.bgbox{
-		 background-color: #EDEDED;
-		 margin-top: 180px;
-		 margin-left: 21px;
-		 position: fixed;
-		 padding: 20px;
-		 float:right;
-		 width:1835px;
-		 height:725px;
-		 z-index: -9;
-		}
 
 		.card {
-		   background-color: white;
-		   padding: 10px;
-		   margin-top: 30px;
-		   box-shadow: 2px 2px 3px #C6C6C6;
+		 background-color: white;
+		 padding: 30px;
+		 margin-top: 30px;
+		 border-radius: 3%;
+		 box-shadow: 2px 2px 10px #000000;
 		}
 
-		.leftcolumn {   
+		.leftcolumn {
 		  float: left;
-		  width: 75%;
+		  width: 70%;
 		}
 
 
 		.rightcolumn {
 		  float: right;
-		  width: 25%;
-		  padding-right: 20px;
+		  width: 30%;
+		  padding-right: 50px;
 		}
 
-		.row:after {
-		  content: "";
-		  display: table;
-		  clear: both;
+		.row {
+		  display: flex;
+		  justify-content: space-between;
+		  align-items: center;
+		  margin: 100px 0;
+		}
+		
+		.col-1 {
+		 flex-basis: 60%;
+		 position: relative;
+		 margin-left: 50px;
 		}
 
-  
-  
-        #slider {
-            position: absolute;
-            width: 50%;
-            height: 40vw;
-            margin: 80px auto;
-            perspective: 1400px;
-            transform-style: preserve-3d;
-	    float:left;
-        }
-        
-        input[type=radio] {
-            position: relative;
-            top: 108%;
-            left: 50%;
-            width: 18px;
-            height: 18px;
-            margin: 0 15px 0 0;
-            opacity: 0.4;
-            transform: translateX(-83px);
-            cursor: pointer;
-        }
-        
-        
-        input[type=radio]:nth-child(5) {
-            margin-right: 0px;
-        }
-        
-        input[type=radio]:checked {
-            opacity: 1;
-        }
-        
-        
-        #slider label {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            left: 0;
-            top: 0;
-            color: white;
-            font-size: 70px;
-            font-weight: bold;
-            border-radius: 5px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 400ms ease;
-	    float:left;
-        }
-        
-        #slides1 {
-            width: 100%;
-            height: 100%;
-        }
-        
-        #slides2 {
-            width: 100%;
-            height: 100%;
-        }
-        
-        #slides3 {
-            width: 100%;
-            height: 100%;
-        }
-        
-        #slides4 {
-            width: 100%;
-            height: 100%;
-        }
-        
-        #slides5 {
-            width: 100%;
-            height: 100%;
-        }
-        
-        
-        #s1:checked ~ #slides1, #s2:checked ~ #slides2, #s3:checked ~ #slides3, #s4:checked ~ #slides4, #s5:checked ~ #slides5 {
-            box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2);
-            transform: translate3d(0%, 0, 0px);
-        }
-        
-        #s1:checked ~ #slides2, #s2:checked ~ #slides3, #s3:checked ~ #slides4, #s4:checked ~ #slides5, #s5:checked ~ #slides1 {
-            box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
-            transform: translate3d(15%, 0, -100px);
-        }
-        
-        #s1:checked ~ #slides3, #s2:checked ~ #slides4, #s3:checked ~ #slides5, #s4:checked ~ #slides1, #s5:checked ~ #slides2 {
-            box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
-            transform: translate3d(30%, 0, -250px);
-        }
-        
-        #s1:checked ~ #slides4, #s2:checked ~ #slides5, #s3:checked ~ #slides1, #s4:checked ~ #slides2, #s5:checked ~ #slides3 {
-            box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
-            transform: translate3d(-30%, 0, -250px);
-        }
-        
-        #s1:checked ~ #slides5, #s2:checked ~ #slides1, #s3:checked ~ #slides2, #s4:checked ~ #slides3, #s5:checked ~ #slides4 {
-            box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
-            transform: translate3d(-15%, 0, -100px);
-        }
-        
+		.col-2 {
+		 flex-basis: 40%;
+		 position: relative;
+		 display: flex;
+		 align-items: center;
+		}
+
+		@media only screen and (max-width: 900px) {
+		 nav ul li {
+		 list-style: none;
+		 position: relative;
+		 bottom: 30px;
+		 display: inline;
+		 margin: 0 auto;
+		 }
+
+		@media only screen and (max-width: 700px) {
+		 nav ul {
+		  width: 100%;
+		  background: #ffffff;
+		  position: absolute;
+		  text-align: center;
+		  font-size: 50px;
+		  top: 40px;
+		  right: 0;
+		  z-index: -1;
+		 }
+		
+		 nav ul li {
+		  list-style-type: none;
+		  display: relative;
+		  margin-top: 100px;
+		  top: 1px;
+		  color: black; 
+		  text-decoration: none;
+		  font-size: 20px;
+		  transition-duration: 300ms;
+		  cursor: pointer;
+		 }
+
+		 nav ul li a:hover {
+		  color: #0046A4;
+		  font-size: 21px;
+		 }
+
+		 .menu {
+		  display: block;
+		 }
+
+		 #menudrop {
+		  overflow: hidden;
+		  height: 150px;
+		  transition: 500ms;
+		 }
+		}
 
   </style>
   </head>
   <body>
     <div class="header">
-      <div id="logo"><img src="logo.png" height="60"></img></div>
-      <span id="heading" style="color: white;">CINEMA</span> <span id="heading" style="color: #00A7E0;">ZAMBOANGA</span>
+      <div class="navbar">
+      <div class="logo"><a href="Home.html"><img src="kcc logo.jpg"></img></a></div>
+      <span id="heading" style="color: #162D7C;">CINEMA</span>
+      <nav>
+        <ul id="menudrop">
+        <li><a href="Home.html">HOME</a></li>
+        <li><a href="link"">NOW SHOWING</a></li>
+        <li><a href="link">COMING SOON</a></li>
+        <li><a href="link">FILM SPOTLIGHT</a></li>
+        <li><a href="link">ABOUT US</a></li>
+        </ul>
+      </nav>
+      <div class="menu"><img src="menu.png" onclick="togglemenu()"></img></div>
     </div>
-    <div class="navigation">
-      <a href="link" class="buttonnav">HOME</a>
-      <a href="link" class="buttonnav">NOW SHOWING</a>
-      <a href="link" class="buttonnav">COMING SOON</a>
-      <a href="link" class="buttonnav">FILM SPOTLIGHT</a>
-      <a href="link" class="buttonnav">ABOUT US</a>
     </div>
     
-    <div class="bgbox">
-    <div class="leftcolumn">
-    <section id="slider">
-        <input type="radio" name="slider" id="s1" checked>
-        <input type="radio" name="slider" id="s2">
-        <input type="radio" name="slider" id="s3">
-        <input type="radio" name="slider" id="s4">
-        <input type="radio" name="slider" id="s5">
-      
-        <label for="s1" id="slides1"> <img src="https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2021/09/black-widow-1-1631278936.jpg" height ="678" width="911.87"> </label>
-        <label for="s2" id="slides2"><img src="https://m.media-amazon.com/images/M/MV5BNmU3OTZlZDQtNDMwMS00YzkzLWE3ZTEtNzVmMjk3ZTdiZTM3XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg" height ="678" width="911.87"></label>
-        <label for="s3" id="slides3"><img src="https://static01.nyt.com/images/2022/07/16/arts/13sea-beast-design1/merlin_209340603_b7202909-4bc0-4f07-8d29-4629720a1e57-articleLarge.jpg?quality=75&auto=webp&disable=upscale" height ="678" width="911.87"></label>
-        <label for="s4" id="slides4"><img src="https://m.media-amazon.com/images/M/MV5BNzRmYTUwYTgtOWViMS00MWRkLTkyMGEtYjc5M2I3YTYxYWUzXkEyXkFqcGdeQXVyMTQyMTMwOTk0._V1_.jpg" height ="678" width="911.87"></label>
-        <label for="s5" id="slides5"><img src="https://s3.amazonaws.com/static.rogerebert.com/uploads/movie/movie_poster/jurassic-world-dominion-2022/large_jurassic-world-dominion-movie-poster-2022.jpeg" height ="678" width="911.87"></label>
-     </section>
-     </div>
-	<div class="rightcolumn">
+	<div class="row">
+	<div class="col-2">
         <div class="card" style="height: 40rem">
-            <h1 style="text-align:left; font-size: 45px; text-shadow: 2px 2px 3px #C6C6C6;">BLACK WIDOW</h1>
-	    <h3 style="text-align:center"><div id="rating">PG-13</div> 2021, Action/Adventure, 2h13m</h3>
-	    <p style="text-align:justify; font-size: 20px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+            <h1>BLACK WIDOW</h1>
+	    <h3><div id="rating">PG-13</div> 2021, Action/Adventure, 2h13m</h3>
+	    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
 
 	<a href="link" class="readmore">Read More</a>
         </div>
 	</div>
+	</div>
 
     </div>
     
+    <script>
+	var menudrop = document.getElementById("menudrop");
+	menudrop.style.maxHeight = "0px";
+
+	function togglemenu(){
+	  if (menudrop.style.maxHeight == "0px") {
+		menudrop.style.maxHeight = "130px";
+	  }	
+	  else {
+	  	menudrop.style.maxHeight = "0px";
+	  }
+	}
+    </script>
   </body>
 </html>
